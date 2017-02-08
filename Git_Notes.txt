@@ -3,10 +3,12 @@ git config --global user.email "jbro567@aucklanduni.ac.nz
 git config --list
 pwd (find current directory)
 ls (list elements of current directory)
+ls -la (shows long list of hidden files)
 cd folder name (change directory)
 git init (set git project in current directory)
 git status (has anything changed - what is status of all files in directory/)
 git add file name (add file to git project)
+git add * (add EVERYTHING)
 -m (add a message - about changes you've made "in inv commas")
 git log (will print out all messages that have been saved in relation to the changes that have been made)
 git log -n (n = number of most recent first messages committed)
@@ -15,3 +17,7 @@ git diff HEAD file.name (head refers to the head of the changes that have been m
 git diff HEAD~1 file.name (compare the current file to the last TWO changes that were made: HEAD plus 1)
 # git forces us to add files before we commit them. Permits a filter - you can reject changes
 git reset (brings the altered (from project ->(add) staging ->(commit) repository) so can return from staging to project by using (reset))
+git checkout HEAD file.name (reverts to form prior to change / corruption etc)
+# create a .gitignore file and fill out the contents describing the files to ignore (e.g. *dat which is all dat files and folder.name/ which would ignore specific directories)
+git add -f c.out (adds an ignored file to a git project)
+git reset c.out (removes an added ignored file from a git project)
